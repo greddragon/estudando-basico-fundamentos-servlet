@@ -10,7 +10,7 @@
 
     <form action="${linkServletNovaEmpresa}" method="post">
 
-        Nome: <input type="text" name="nome" />
+        Nome: <input type="text" name="nome"/>
 
         <input type="submit" />
     </form>

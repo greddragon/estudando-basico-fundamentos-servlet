@@ -25,11 +25,11 @@ public class ListaEmpresasServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresa();
-		
+		/*
 		PrintWriter out = response.getWriter();
 		
 		out.println("<html><body>");
@@ -39,7 +39,7 @@ public class ListaEmpresasServlet extends HttpServlet {
         	out.println("<li> " + empresa.getNome() + "</li>");
         }
         out.println("</ul>");
-        out.println("</body></html>");
+        out.println("</body></html>");*/
         
         //jsp
         RequestDispatcher rd = request.getRequestDispatcher("/listagemEmpresas.jsp");

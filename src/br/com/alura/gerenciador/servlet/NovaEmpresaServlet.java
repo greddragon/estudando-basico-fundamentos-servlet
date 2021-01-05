@@ -13,22 +13,24 @@ import javax.servlet.http.HttpServletResponse;
 public class NovaEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException  {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException  {
 			
 		 System.out.println("Cadastrando nova empresa");
 		 
-		 String nomeEmpresa = req.getParameter("nome");
+		 String nomeEmpresa = request.getParameter("nome");
 		 Empresa empresa = new Empresa();
 		 empresa.setNome(nomeEmpresa);
 		 
 		 Banco banco = new Banco();
 		 banco.adiciona(empresa);
 		 
+		 response.sendRedirect("listaEmpresas");
+		 
 		 //jsp
 		 
-		 RequestDispatcher rd = req.getRequestDispatcher("/novaEmpresaCriada.jsp");
-		 req.setAttribute("empresa", empresa.getNome());
-		 rd.forward(req, resp);
+//		 RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas");
+//		 request.setAttribute("empresa", empresa.getNome());
+//		 rd.forward(request, response);
 		
 	}
 	
