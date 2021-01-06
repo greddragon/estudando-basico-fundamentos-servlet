@@ -1,4 +1,4 @@
-package br.com.alura.gerenciador.servlet;
+package br.com.alura.gerenciador.modelo;
 
 public class Empresa {
 	private Integer id;

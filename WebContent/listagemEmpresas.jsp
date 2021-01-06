@@ -24,8 +24,8 @@
 			<c:forEach items="${ lista }" var="empresa">
 				<li>
 					${ empresa.getNome()}
-					<a href="/gerenciador/mostraEmpresa?id=${ empresa.getId() }">Editar</a>
-					<a href="/gerenciador/removeEmpresa?id=${ empresa.getId() }">Remover</a>
+					<a href="/gerenciador/entrada?acao=MostraEmpresa&id=${ empresa.getId() }">Editar</a>
+					<a href="/gerenciador/entrada?acao=RemoveEmpresa&id=${ empresa.getId() }">Remover</a>
 				</li>
 				
 			</c:forEach>

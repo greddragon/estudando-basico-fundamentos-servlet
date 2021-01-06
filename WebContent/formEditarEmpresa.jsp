@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:url value="/editarEmpresa" var="linkServletEditarEmpresa"/>
+<c:url value="/entrada?acao=AlterarEmpresa" var="linkServletEditarEmpresa"/>
 <!DOCTYPE html>
 <html>
 <head>

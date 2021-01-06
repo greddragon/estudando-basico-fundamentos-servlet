@@ -7,10 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.gerenciador.modelo.Banco;
+
 /**
  * Servlet implementation class RemoveEmpresaServlet
  */
-@WebServlet("/removeEmpresa")
+//@WebServlet("/removeEmpresa")
 public class RemoveEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -24,7 +26,6 @@ public class RemoveEmpresaServlet extends HttpServlet {
 		Integer id = Integer.valueOf(paramId);
 		
 		Banco.removeEmpresa(id);
-		System.out.print(id);
 		
 		response.sendRedirect("listaEmpresas");
 		
